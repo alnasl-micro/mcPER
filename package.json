@@ -1,0 +1,31 @@
+{
+  "name": "mcper",
+  "version": "0.1.0",
+  "description": "MCP server for the Fiat ePER v84 parts catalogue",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alnasl-micro/mcPER.git"
+  },
+  "type": "module",
+  "bin": {
+    "mcper": "src/index.js"
+  },
+  "scripts": {
+    "start": "node --no-warnings src/index.js",
+    "build-data": "node --no-warnings scripts/build-data.js",
+    "test": "node --no-warnings --test",
+    "check-eper": "node --no-warnings scripts/check-eper.js"
+  },
+  "engines": {
+    "node": ">=22.13"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "mdb-reader": "^3.2.0",
+    "pngjs": "^7.0.0",
+    "seek-bzip": "^2.0.0",
+    "zod": "^4.6.7"
+  }
+}
